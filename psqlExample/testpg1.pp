@@ -15,20 +15,22 @@ end;
 
 
 Var
-  pghost,pgport,pgoptions,pgtty,dbname : Pchar;
+  pghost,pgport,pgoptions,pgtty,dbname,myuser,passwd : Pchar;
   nFields,i,j : longint;
   conn : PPGConn;
   res : PPGresult;
 
 begin
-  pghost := NiL;        { host name of the backend server }
+  pghost := 'localhost';        { host name of the backend server }
   pgport := NiL;        { port of the backend server }
   pgoptions := NiL;     { special options to start up the backend server }
   pgtty := NiL;         { debugging tty for the backend server }
   dbName := 'template1';
-
+  myuser:='postgres';
+  passwd:='wxwpxh';
   { make a connection to the database }
-  conn := PQsetdb(pghost, pgport, pgoptions, pgtty, dbName);
+  {conn := PQsetdb(pghost, pgport, pgoptions, pgtty, dbName);}
+  conn := PQsetdbLogin(pghost, pgport, pgoptions, pgtty, dbName,myuser,passwd);
 
   { check to see that the backend connection was successfully made }
   if (PQstatus(conn) = CONNECTION_BAD) then

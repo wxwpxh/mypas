@@ -12,5 +12,4 @@ packages=postgres
 fpcpackage=y
 
 [default]
-#fpcdir=../../..
-fpcdir=/opt/local/share/doc
+fpcdir=/opt/local/fpc

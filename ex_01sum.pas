@@ -1,10 +1,8 @@
-Program ex_01sum;
+Program Example01;
 var
-	sum1,sum2:int64;
-	i:Integer;	
+	sum1,sum2,i:int64;	
 begin
-	sum1:=0;
-	sum2:=0;
+	sum1:=0;sum2:=0;
 	for i:=1 to 10 do
 	 begin
 		sum1:=sum1+i;

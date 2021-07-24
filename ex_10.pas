@@ -1,14 +1,18 @@
-Program ex_10;
-var
-	i:integer;
-	sum:real;	
+Program Example10;
+uses Crt;
+{ Program to demonstrate the InsLine function. }
 begin
-	sum:=0;
-	i:=0;
-	while  i<100 do
-	begin
-		i:=i+1;
-		sum:=sum+1/i
-	end;	
-	WriteLn('sum=',sum);
+ClrScr;
+WriteLn;
+WriteLn('Line1');
+WriteLn('Line2');
+WriteLn('Line2');
+WriteLn('Line3');
+WriteLn;
+WriteLn('Oops,Line 2 is listed twice,',
+			'let''s delete the line at the cursor postion');
+GotoXY(1,3);
+ReadKey;
+DelLine;
+GotoXY(1,10);
 end.

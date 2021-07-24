@@ -15,17 +15,20 @@ end;
 
 
 Var
-  pghost,pgport,pgoptions,pgtty,dbname : Pchar;
+  pghost,pgport,pgoptions,pgtty,dbname,myuser,passwd : Pchar;
   nFields,i : longint;
   conn : PPGConn;
   res : PPGresult;
   dummy : string;
 
 begin
-  pghost := NiL;        { host name of the backend server }
-  pgport := NiL;        { port of the backend server }
+  pghost := 'localhost';        { host name of the backend server }
+  pgport := '5432';        { port of the backend server }
   pgoptions := NiL;     { special options to start up the backend server }
   pgtty := NiL;         { debugging tty for the backend server }
+  myuser:='mymotif';
+  passwd:='wxwpxh';
+
   if paramcount=1 then
     begin
     dummy:=paramstr(1)+#0;
@@ -34,8 +37,10 @@ begin
   else
     dbName := 'testdb';
 
+
   { make a connection to the database }
-  conn := PQsetdb(pghost, pgport, pgoptions, pgtty, dbName);
+  {conn := PQsetdb(pghost, pgport, pgoptions, pgtty, dbName);}
+  conn := PQsetdbLogin(pghost, pgport, pgoptions, pgtty, dbName,myuser,passwd);
 
   { check to see that the backend connection was successfully made }
   if (PQstatus(conn) = CONNECTION_BAD) then
@@ -45,7 +50,7 @@ begin
     exit_nicely(conn);
     end;
 
-  res := PQexec(conn, 'select * from email');
+  res := PQexec(conn, 'select * from userdeatail');
   if (PQresultStatus(res) <> PGRES_TUPLES_OK) then
     begin
     Writeln (stderr, 'select command failed.');
