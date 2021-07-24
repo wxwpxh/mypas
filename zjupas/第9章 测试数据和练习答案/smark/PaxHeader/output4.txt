@@ -1,0 +1,2 @@
+79 path=prg/mypas/zjupas/第9章 测试数据和练习答案/smark/output4.txt
+27 atime=1492450552.886343

@@ -1,0 +1,37 @@
+练习题答案
+ 
+1.写出下列程序的运算结果
+（1）
+
+     7     8     9    10     1     2     3     4     5     6
+
+（2）
+
+1065
+2051
+
+（3）
+
+①　Can't be divided.
+
+②　Can be divided.
+
+③　Can't be divided.
+
+2.补充完善下列程序
+（1）
+
+①　s[i]:=0;
+②　s[b[i]]:=s[[b[i]]+a[i];
+③　i+1 to k do
+④　(cmin>sum)
+⑤　(bj)=k)
+⑥　b[i]:=1
+
+（2）
+
+①　c[n+1]
+②　(yu+d[j1]<c[j1+1])
+③　yu:=yu+d[j1];
+④　e[j0]:=s;
+⑤　writeln(e[i]:4)

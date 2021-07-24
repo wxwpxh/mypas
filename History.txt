@@ -1,0 +1,5 @@
+2
+pas
+c:\pp\bin\go32v2\fpc.exe
+bst
+

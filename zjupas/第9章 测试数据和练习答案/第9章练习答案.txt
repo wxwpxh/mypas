@@ -1,0 +1,32 @@
+练习题答案 
+
+1.写出下列程序的运行结果：
+（1）
+
+letter:22  digit:11  other:1
+
+（2）
+
+2/19/1995
+3/1/2009
+7/1/1997
+8/1/2022
+3/1/1998
+
+
+2.补充完善下列程序
+（1）
+
+①  buf:=buf+[i];
+②  k:=k div 2;
+③  buf:=buf+[i];
+④  i in buf
+
+（2）
+
+①  not(next in sieve)
+②  j:=next;
+③  sieve:=sieve-[j];
+④  next in primes
+⑤  next
+

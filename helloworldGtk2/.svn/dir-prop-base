@@ -1,0 +1,13 @@
+K 10
+svn:ignore
+V 54
+*.bak
+*.exe
+*.o
+*.ppu
+*.s
+Package.fpc
+fpcmade.*
+units
+
+END
