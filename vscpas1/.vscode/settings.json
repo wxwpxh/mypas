@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/*.exe": true,
+        "**/*.o":true
+    },
+    "editor.fontSize": 18,
+    "pascal.codeNavigation": "workspace",
+    "pascal.tags.autoGenerate": true
+}
