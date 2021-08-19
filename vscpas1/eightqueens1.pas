@@ -11,7 +11,7 @@ begin
 	writeln;
 end;
 
-procedure try(i:integer);
+procedure mytry(i:integer);
 	var j:integer;
 begin
 	for j:=1 to 8 do {每个皇后都有8种可能位置}
@@ -21,8 +21,7 @@ begin
 			b[j]:=1; {宣布占领第J行}
 			c[i+j]:=1; {占领两个对角线}
 			d[i-j]:=1;
-			if i<8 
-				then try(i+1) {8个皇后没有摆完，递归摆放下一皇后}
+			if i<8 then mytry(i+1) {8个皇后没有摆完，递归摆放下一皇后}
 			else print; {完成任务，打印结果}
 			b[j]:=0; {回溯}
 			c[i+j]:=0;
@@ -37,5 +36,5 @@ begin
 		c[k]:=0;
 		d[k]:=0;
 	end;
-	try(1);{从第1个皇后开始放置}
+	mytry(1);{从第1个皇后开始放置}
 end.
